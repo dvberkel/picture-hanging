@@ -20,7 +20,7 @@ class WordParser:
                         index += 1
                     try:
                         number = int(expression[start:index])
-                        return [(letter, number)]
+                        return [(letter, number)] + self._parse(expression[index:])
                     except ValueError:
                         pass
                 else:
