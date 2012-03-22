@@ -35,5 +35,13 @@ class testElement(unittest.TestCase):
 
         self.assertEquals(Element.word(""), actual)
 
+    def testCommutate(self):
+        a = Element.word("a")
+        b = Element.word("b")
+
+        actual = a.commutate(b)
+
+        self.assertEquals(Element.word("aba^-1b^-1"), actual)
+
 if __name__ == '__main__':
     unittest.main()

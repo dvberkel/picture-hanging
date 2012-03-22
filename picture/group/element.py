@@ -15,6 +15,9 @@ class Element:
         inverseFactors.reverse()
         return Element(inverseFactors)
 
+    def commutate(self, other):
+        return self * other * self.inverse() * other.inverse()
+
     def remove(self, letter):
         return Element([f for f in self.factors if f[0] != letter])
 
