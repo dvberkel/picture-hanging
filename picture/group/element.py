@@ -1,5 +1,6 @@
 from picture.group.wordparser import WordParser
 from picture.group.formatter import FactorsFormatter
+from picture.group.normalizer import Normalizer
 
 class Element:
     @staticmethod
@@ -7,7 +8,7 @@ class Element:
         return Element(WordParser(word).factors())
     
     def __init__(self, factors):
-        self.factors = factors
+        self.factors = Normalizer.of(factors).normalize()
 
     def inverse(self):
         inverseFactors = [(f[0], -f[1]) for f in self.factors]
