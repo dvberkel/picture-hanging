@@ -4,6 +4,7 @@ from picture.group.wordparser import WordParser, ParseError
 
 class testWordParser(unittest.TestCase):
     def testWordParserFactors(self):
+        self.assertEquals([], WordParser("").factors())
         self.assertEquals([('a', 1)], WordParser("a").factors())
         self.assertEquals([('b', 1)], WordParser("b").factors())
         self.assertEquals([('a', 1)], WordParser("a^1").factors())

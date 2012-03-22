@@ -8,6 +8,8 @@ class WordParser:
         return self._parse(self.word)
 
     def _parse(self, expression):
+        if (len(expression) == 0):
+            return []
         if (expression[0] in string.letters):
             letter = expression[0]
             if (len(expression) > 1):
