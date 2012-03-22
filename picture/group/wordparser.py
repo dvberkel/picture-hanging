@@ -16,8 +16,11 @@ class WordParser:
                     index = (start + 1) if expression[start] == '-' else start
                     while (index < len(expression) and expression[index] in string.digits):
                         index += 1
-                    number = int(expression[start:index])
-                    return [(letter, number)]
+                    try:
+                        number = int(expression[start:index])
+                        return [(letter, number)]
+                    except ValueError:
+                        pass
             else:
               return [(letter, 1)]
         raise ParseError()

@@ -18,6 +18,7 @@ class testWordParser(unittest.TestCase):
     def testExceptionsThrown(self):
         self.assertRaises(ParseError, WordParser("^").factors)
         self.assertRaises(ParseError, WordParser("a-1").factors)
+        self.assertRaises(ParseError, WordParser("a^-").factors)
 
 if __name__ == '__main__':
     unittest.main()
