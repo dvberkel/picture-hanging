@@ -9,6 +9,11 @@ class Element:
     def __init__(self, factors):
         self.factors = factors
 
+    def inverse(self):
+        inverseFactors = [(f[0], -f[1]) for f in self.factors]
+        inverseFactors.reverse()
+        return Element(inverseFactors)
+
     def __mul__(self, other):
         return Element(self.factors + other.factors)
 

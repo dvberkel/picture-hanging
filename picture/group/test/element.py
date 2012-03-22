@@ -14,5 +14,12 @@ class testElement(unittest.TestCase):
 
         self.assertEquals(Element.word("ab"), actual)
 
+    def testInverseOfElements(self):
+        element = Element.word("a^2b^-1");
+
+        actual = element.inverse()
+
+        self.assertEquals(Element.word("ba^-2"), actual)
+
 if __name__ == '__main__':
     unittest.main()
