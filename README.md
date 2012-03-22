@@ -1,6 +1,8 @@
 Picture-Hanging
 ===============
 
+[![Build Status](https://secure.travis-ci.org/dvberkel/picture-hanging.png?branch=master)](http://travis-ci.org/dvberkel/picture-hanging)
+
 In [Picture-Hanging Puzzles](http://arxiv.org/abs/1203.3602 "ArXiv page for 'Picture-Hanging Puzzles'")
 a famous puzzle, and some of its generalisations are solved using a
 words over a free group.
