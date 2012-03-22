@@ -10,6 +10,8 @@ class testWordParser(unittest.TestCase):
         self.assertEquals([('b', 1)], WordParser("b^1").factors())
         self.assertEquals([('a', 2)], WordParser("a^2").factors())
         self.assertEquals([('b', 2)], WordParser("b^2").factors())
+        self.assertEquals([('a', 10)], WordParser("a^10").factors())
+        self.assertEquals([('b', 10)], WordParser("b^10").factors())
         
     def testExceptionsThrown(self):
         self.assertRaises(ParseError, WordParser("^").factors)
