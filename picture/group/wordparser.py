@@ -3,4 +3,7 @@ class WordParser:
         self.word = word
 
     def factors(self):
-        return [(self.word[0], int(self.word[2]) if len(self.word) > 1 else 1)]
+        return self._parse(self.word)
+
+    def _parse(self, expression):
+        return [(expression[0], int(expression[2]) if len(expression) > 1 else 1)]
