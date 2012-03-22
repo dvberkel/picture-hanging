@@ -4,4 +4,7 @@ class FreeGroup:
         return FreeGroup(generators)
 
     def __init__(self, generators):
-        pass
+        self.generators = generators
+
+    def __len__(self):
+        return len(self.generators)
