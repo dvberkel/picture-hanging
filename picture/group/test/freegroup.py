@@ -14,8 +14,8 @@ class testFreeGroup(unittest.TestCase):
         self.assertEqual(2, len(self.group))
 
     def testGeneratorAccess(self):
-        self.assertEquals(Element("a"), self.group[0])
-        self.assertEquals(Element("b"), self.group[1])
+        self.assertEquals(Element.word("a"), self.group[0])
+        self.assertEquals(Element.word("b"), self.group[1])
 
 if __name__ == '__main__':
     unittest.main()

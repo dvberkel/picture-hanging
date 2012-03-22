@@ -3,7 +3,7 @@ from picture.group.element import Element
 class FreeGroup:
     @staticmethod
     def over(*generators):
-        return FreeGroup([Element(g) for g in generators])
+        return FreeGroup([Element.word(g) for g in generators])
 
     def __init__(self, generators):
         self.generators = generators
