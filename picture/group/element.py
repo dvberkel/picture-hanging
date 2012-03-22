@@ -15,6 +15,9 @@ class Element:
         inverseFactors.reverse()
         return Element(inverseFactors)
 
+    def remove(self, letter):
+        return Element([f for f in self.factors if f[0] != letter])
+
     def __mul__(self, other):
         return Element(self.factors + other.factors)
 

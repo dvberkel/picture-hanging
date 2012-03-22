@@ -28,5 +28,12 @@ class testElement(unittest.TestCase):
 
         self.assertEquals(Element.word(""), actual)
 
+    def testRemoval(self):
+        element = Element.word("aba^-1b^-1");
+
+        actual = element.remove('a')
+
+        self.assertEquals(Element.word(""), actual)
+
 if __name__ == '__main__':
     unittest.main()
