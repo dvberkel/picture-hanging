@@ -11,11 +11,12 @@ class WordParser:
         if (expression[0] in string.letters):
             letter = expression[0]
             if (len(expression) > 1):
-                if (expression[1] == '^'):
-                    index = 2
+                if (len(expression) > 2 and expression[1] == '^'):
+                    start = 2
+                    index = (start + 1) if expression[start] == '-' else start
                     while (index < len(expression) and expression[index] in string.digits):
                         index += 1
-                    number = int(expression[2:index])
+                    number = int(expression[start:index])
                     return [(letter, number)]
             else:
               return [(letter, 1)]
