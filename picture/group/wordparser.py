@@ -23,6 +23,9 @@ class WordParser:
                         return [(letter, number)]
                     except ValueError:
                         pass
+                else:
+                    head = [(letter, 1)]
+                    return head + self._parse(expression[1:])
             else:
               return [(letter, 1)]
         raise ParseError()
