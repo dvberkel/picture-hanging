@@ -11,7 +11,10 @@ class WordParser:
         if (expression[0] in string.letters):
             letter = expression[0]
             if (len(expression) > 1):
-                return [(letter, int(expression[2]))]
+                if (expression[1] == '^'):
+                    index = 2
+                    number = int(expression[2])
+                    return [(letter, number)]
             else:
               return [(letter, 1)]
         raise ParseError()
