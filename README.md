@@ -20,4 +20,19 @@ on free groups.
 > a product of finitely many elements of *S* and their inverses
 > (disregarding trivial variations). Apart from the existence of
 > inverses no other relation exists between the generators of a free
-> group. 
+> group.
+
+Environment
+-----------
+
+Python is used in this project. Make sure that python is able to find
+the project. I usually add the current directory to the `PYTHONPATH`
+with the following command.
+
+    > export PYTHONPATH=.
+
+### Tests
+
+Execute the following command to run all tests in the project
+
+    > python picture/test/test_all.py
