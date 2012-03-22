@@ -11,7 +11,7 @@ class WordParser:
         if (len(expression) == 0):
             return []
         if (expression[0] in string.letters):
-            letter = expression[0]
+            letter, number, index = expression[0], 1, 1
             if (len(expression) > 1):
                 if (len(expression) > 2 and expression[1] == '^'):
                     start = 2
@@ -24,10 +24,9 @@ class WordParser:
                     except ValueError:
                         pass
                 else:
-                    head = [(letter, 1)]
-                    return head + self._parse(expression[1:])
+                    return [(letter, number)] + self._parse(expression[index:])
             else:
-              return [(letter, 1)]
+              return [(letter, number)] + self._parse(expression[index:])
         raise ParseError()
 
 class ParseError:
