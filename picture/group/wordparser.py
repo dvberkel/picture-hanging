@@ -9,7 +9,11 @@ class WordParser:
 
     def _parse(self, expression):
         if (expression[0] in string.letters):
-            return [(expression[0], int(expression[2]) if len(expression) > 1 else 1)]
+            letter = expression[0]
+            if (len(expression) > 1):
+                return [(letter, int(expression[2]))]
+            else:
+              return [(letter, 1)]
         raise ParseError()
 
 class ParseError:
