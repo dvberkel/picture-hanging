@@ -21,7 +21,7 @@ class Element:
         return self.factors == other.factors
 
     def __str__(self):
-        return self.word
+        return str(FactorsFormatter(self.factors))
     
     def __repr__(self):
-        return "Element(\"{0}\")".format(str(FactorsFormatter(self.factors)))
+        return "Element(\"{0}\")".format(self)
