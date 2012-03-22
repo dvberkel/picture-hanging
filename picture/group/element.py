@@ -18,6 +18,10 @@ class Element:
     def commutate(self, other):
         return self * other * self.inverse() * other.inverse()
 
+    def letters(self):
+        for factor in self.factors:
+            yield(factor[0])
+
     def remove(self, letter):
         return Element([f for f in self.factors if f[0] != letter])
 
