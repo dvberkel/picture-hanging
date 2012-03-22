@@ -1,6 +1,7 @@
 import unittest
 
 from picture.group.freegroup import FreeGroup
+from picture.group.element import Element
 
 class testFreeGroup(unittest.TestCase):
     def setUp(self):
@@ -11,6 +12,10 @@ class testFreeGroup(unittest.TestCase):
     
     def testNumberOfGenerators(self):
         self.assertEqual(2, len(self.group))
+
+    def testGeneratorAccess(self):
+        self.assertEquals(Element("a"), self.group[0])
+        self.assertEquals(Element("b"), self.group[1])
 
 if __name__ == '__main__':
     unittest.main()
