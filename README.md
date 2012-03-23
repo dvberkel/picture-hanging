@@ -38,3 +38,9 @@ with the following command.
 Execute the following command to run all tests in the project
 
     > python picture/test/test_all.py
+
+### Executables
+
+To solve a picture hanging puzzle with *n* pins run
+
+    > bin/picture-hanging n
