@@ -1,0 +1,11 @@
+#! /usr/bin/env python
+
+import sys
+
+from picture.solver import Solver
+
+if (len(sys.argv) == 2):
+   n = int(sys.argv[1])
+   print Solver().solve(n)
+else:
+  print "usage: {0} <n>".format(sys.argv[0])
