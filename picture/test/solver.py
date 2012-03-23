@@ -8,8 +8,11 @@ class testSolver(unittest.TestCase):
         for n in range(1,2):
             word = Solver().solve(n)
             
+            letterCount = 0
             for letter in word.letters():
+                letterCount += 1
                 self.assertEquals(Element.word(""), word.remove(letter))
+            self.assertEquals(n, letterCount)
 
 if __name__ == '__main__':
     unittest.main()
